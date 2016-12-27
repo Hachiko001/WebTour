@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @guide.name %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @guide.password %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @guide.date %>
+</p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @guide.language %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @guide.address %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @guide.email %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @guide.image %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @guide.rating %>
+</p>
+
+<%= link_to 'Edit', edit_guide_path(@guide) %> |
+<%= link_to 'Back', guides_path %>
