@@ -11,45 +11,45 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+  <div class="form-group">
+    <%= f.label :name, class: 'form-control-lable'%>
+    <%= f.text_field :name, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <%= f.text_field :password %>
+  <div class="form-group">
+    <%= f.label :password, class: 'form-control-lable' %>
+    <%= f.text_field :password, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= f.label :date %>
-    <%= f.datetime_select :date %>
+  <div class="form-group">
+    <%= f.label :date,class: 'form-control-lable'%>
+    <%= f.datetime_select :date, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= f.label :language %>
-    <%= f.text_field :language %>
+  <div class="form-group">
+    <%= f.label :language,class: 'form-control-lable' %>
+    <%= f.text_field :language, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= f.label :address %>
-    <%= f.text_field :address %>
+  <div class="form-group">
+    <%= f.label :address, class: 'form-control-lable' %>
+    <%= f.text_field :address,class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
+  <div class="form-group">
+    <%= f.label :email, class: 'form-control-lable' %>
+    <%= f.text_field :email, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= f.label :image %>
+  <div class="form-group">
+    <%= f.label :image, class: 'form-control-lable' %>
     <%= f.file_field :image, onchange:"readURL(this)", class:"btn btn-info" %>
     <img id ="blah" src="#" alt = "your image" width = "300" height="300">
   </div>
 
-  <div class="field">
-    <%= f.label :rating %>
-    <%= f.text_field :rating %>
+  <div class="form-group">
+    <%= f.label :rating, class: 'form-control-lable' %>
+    <%= f.text_field :rating, class: 'form-control' %>
   </div>
 
   <div class="actions">
