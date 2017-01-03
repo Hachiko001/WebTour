@@ -1,7 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Guides</h1>
-
+ <%= link_to "English", guides_path(search_language: "English"), class:'btn btn-success', method: :get %>
+  <%= link_to "French", guides_path(search_language: "French"), class:'btn btn-warning', method: :get %>
+    <%= link_to "Other", guides_path(search_language: "Other"), class:'btn btn-danger', method: :get %>
 <table>
   <thead>
     <tr>
