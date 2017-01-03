@@ -28,7 +28,7 @@
         <td><%= guide.language %></td>
         <td><%= guide.address %></td>
         <td><%= guide.email %></td>
-        <td><%= guide.image %></td>
+        <td><%= image_tag guide.image_url %></td>
         <td><%= guide.rating %></td>
         <td><%= link_to 'Show', guide %></td>
         <td><%= link_to 'Edit', edit_guide_path(guide) %></td>
