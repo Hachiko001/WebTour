@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Guides</h1>
+<h1><%= link_to "Guides",guides_path %></h1>
  <%= link_to "English", guides_path(search_language: "English"), class:'btn btn-success', method: :get %>
   <%= link_to "French", guides_path(search_language: "French"), class:'btn btn-warning', method: :get %>
     <%= link_to "Other", guides_path(search_language: "Other"), class:'btn btn-danger', method: :get %>
@@ -28,7 +28,7 @@
         <td><%= guide.language %></td>
         <td><%= guide.address %></td>
         <td><%= guide.email %></td>
-        <td><%= image_tag guide.image_url %></td>
+        <td><%= guide.image %></td>
         <td><%= guide.rating %></td>
         <td><%= link_to 'Show', guide %></td>
         <td><%= link_to 'Edit', edit_guide_path(guide) %></td>
