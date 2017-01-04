@@ -4,7 +4,14 @@ class GuidesController < ApplicationController
   # GET /guides
   # GET /guides.json
   def index
-    @guides = Guide.all
+
+    key = params[:q]
+    search_language = params[:search_language]
+    if( search_language == "Other")
+      @guides =   Guide.where(Guide.arel_table[:language].does_not_match('%French%')).where(Guide.arel_table[:language].does_not_match('%English%')).search_name key
+    else
+      @guides = Guide.search_language(search_language).search_name key
+end
   end
 
   # GET /guides/1
