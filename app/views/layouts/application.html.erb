@@ -20,9 +20,6 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="http://example.com" id="responsiveNavbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
         <div class="dropdown-menu" aria-labelledby="responsiveNavbarDropdown">
@@ -33,11 +30,14 @@
       </li>
     </ul>
     <form class="form-inline float-lg-right">
-      <input class="form-control" type="text" placeholder="Search">
+      <%= form_tag guides_path, class: "form-inline", method: :get do %>
+      <input class="form-control" type="text" placeholder="Keyword" name="q">
       <button class="btn btn-outline-success" type="submit">Search</button>
+      <% end %>
     </form>
   </div>
 </nav>
     <%= yield %>
+    
   </body>
 </html>
