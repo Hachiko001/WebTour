@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 
-
+#user authentication
+gem 'devise'
+#bcrypt
+gem 'bcrypt', platforms: :ruby
+#file uploader
 gem 'carrierwave'
 #for the mail
 gem 'figaro'
