@@ -57,3 +57,5 @@ gem 'bootstrap', '~> 4.0.0.alpha5'
 gem 'rails-assets-tether'
 
 gem 'frontend-generators'
+
+gem "ratyrate"
