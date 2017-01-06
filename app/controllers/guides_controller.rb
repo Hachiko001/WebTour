@@ -11,8 +11,9 @@ class GuidesController < ApplicationController
       @guides =   Guide.where(Guide.arel_table[:language].does_not_match('%French%')).where(Guide.arel_table[:language].does_not_match('%English%')).search_name key
     else
       @guides = Guide.search_language(search_language).search_name key
+    end
+  
 end
-  end
 
   # GET /guides/1
   # GET /guides/1.json
@@ -65,7 +66,7 @@ end
     respond_to do |format|
       format.html { redirect_to guides_url, notice: 'Guide was successfully destroyed.' }
       format.json { head :no_content }
-    end
+        end
   end
 
   private

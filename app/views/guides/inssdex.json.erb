@@ -1,0 +1,15 @@
+[
+
+<% @guides.each do |guide| %>
+  {
+    name: <%= guide.name %>,
+    passord: <%= guide.password %>,
+    date: <%= guide.date %>,>
+  language: <%= guide.language %>,
+    address: <%= guide.address %>,
+  guide: <%= guide.email %>,
+  image: <%= image_tag guide.image_url %>,
+  rating: <%= guide.rating %>,
+    }
+<% end %>
+]
