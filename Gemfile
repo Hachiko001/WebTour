@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+
+#dotenv: env variable
+gem 'dotenv-rails'
 #user authentication
 gem 'devise'
 #bcrypt

@@ -3,8 +3,10 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   ratyrate_rater
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
-  def cart_count
-    #     $redis.scard "cart#{id}"
-   end
+         :recoverable, :rememberable, :trackable, :validatable,
+         :confirmable
 end
+
+def cart_count
+  #     $redis.scard "cart#{id}"
+ end

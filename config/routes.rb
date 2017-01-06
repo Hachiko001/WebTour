@@ -7,11 +7,10 @@ Rails.application.routes.draw do
   resources :guides
   resources :tours
 
-  root 'grayscales#index'
 
-  resource :cart, only: [:show] do
-  put 'add/:guide_id', to: 'carts#add', as: :add_to
-  put 'remove/:guide_id', to: 'carts#remove', as: :remove_from
+root 'grayscales#index'
+resource :cart, only: [:show] do
+put 'add/:guide_id', to: 'carts#add', as: :add_to
+put 'remove/:guide_id', to: 'carts#remove', as: :remove_from
 end
-
 end

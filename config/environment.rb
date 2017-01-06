@@ -10,8 +10,8 @@ ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.smtp_settings = {
  :address              => "smtp.gmail.com",
  :port                 => 587,
- :user_name            => 'pkmgoclone1@gmail.com',
- :password             => 'shaolin25',
+ :user_name            => ENV['GOOGLE_USER'],
+ :password             => ENV['GOOGLE_PASSWORD'],
  :authentication       => "plain",
 :enable_starttls_auto => true
 }
