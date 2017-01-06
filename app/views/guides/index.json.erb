@@ -1,0 +1,16 @@
+[
+  <% @guides.each_with_index do |guide, index| %>
+    {
+      "id": <%= guide.id %>,
+      "name": "<%= guide.name %>",
+      "language": "<%= guide.language %>",
+      "email": "<%= guide.email %>",
+      "password": "<%= guide.password %>",
+      "created_at": "<%= guide.created_at %>",
+      "updated_at": "<%= food_item.updated_at %>"
+
+
+    <%= index == (@guides.length - 1)? '}' : '},' %>
+  <% end %>
+
+]

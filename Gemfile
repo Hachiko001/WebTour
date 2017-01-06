@@ -59,3 +59,6 @@ gem 'rails-assets-tether'
 gem 'frontend-generators'
 
 gem "ratyrate"
+
+gem 'redis', '~> 3.0.1'
+gem 'hiredis'
