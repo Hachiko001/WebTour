@@ -1,4 +1,7 @@
 class Guide < ApplicationRecord
+has_many :order_guides
+default_scope { where(active: true) }
+
 ratyrate_rateable "language", "attitude", "price"
 
 mount_uploader :image, ImageUploader # Tells rails to use this uploader for this model.
