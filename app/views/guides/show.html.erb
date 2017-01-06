@@ -42,3 +42,10 @@
 
 <%= link_to 'Edit', edit_guide_path(@guide) %> |
 <%= link_to 'Back', guides_path %>
+
+<br>
+Price: <%= rating_for @guide, "price",star: 5, disable_after_rate: false, enable_half: true,cancel: true, imdb_avg: true %>
+<br>
+Language: <%= rating_for @guide, "language", star: 5, disable_after_rate: false, enable_half: true,cancel: true%>
+<br>
+Attitude: <%= rating_for @guide, "attitude", star: 5, disable_after_rate: false, enable_half: true, cancel: true %>
