@@ -1,5 +1,7 @@
 class Guide < ApplicationRecord
 
+has_many :comments
+
 def self.search_name(key)
    where('name like ?', "%#{key}%")
 end

@@ -14,7 +14,7 @@ $(document).ready(function () {
   }, function() {
     $(this).removeClass('hover-row')
   });
-  loadGuides();
+  //loadGuides();
   loadRailsAJAXGuides();
 });
 
@@ -92,9 +92,6 @@ function loadGuides() {
           var linkText = document.createTextNode("Destroy");
           link.appendChild(linkText);
           element.appendChild(link);
-          
-
-
 
           container.appendChild(element);
         });

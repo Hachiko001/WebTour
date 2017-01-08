@@ -12,7 +12,7 @@ class GuidesController < ApplicationController
     else
       @guides = Guide.search_language(search_language).search_name key
     end
-  
+
 end
 
   # GET /guides/1
@@ -68,7 +68,9 @@ end
       format.json { head :no_content }
         end
   end
-
+def show
+  @comment = Comment.new
+end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_guide
