@@ -12,12 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+
 //= require_tree .
 //= require bootstrap-sprockets
 //= require jquery.raty
 //= require ratyrate
+
 function readURL(input){
+  debugger
    if(input.files && input.files[0]){
      var reader = new FileReader();
      reader.onload = function(e){

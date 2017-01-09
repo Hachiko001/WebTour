@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
-
-<h1><%= link_to "Guides",guides_path %></h1>
+<div class="container">
+    <div class="row">
+<h1> <%= link_to "Guides", guides_path %></h1>
  <%= link_to "English", guides_path(search_language: "English"), class:'btn btn-success', method: :get %>
   <%= link_to "French", guides_path(search_language: "French"), class:'btn btn-warning', method: :get %>
     <%= link_to "Other", guides_path(search_language: "Other"), class:'btn btn-danger', method: :get %>
@@ -20,10 +21,9 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @guides.each do |guide| %>
-      <tr>
+      <tr >
         <td><%= guide.name %></td>
         <td><%= guide.password %></td>
         <td><%= guide.date %></td>
@@ -47,5 +47,18 @@
 </table>
 
 <br>
+
+
+
+
+
+<div class="row" >
+    Javascript Table
+    <div id="jsguides"></div>
+</div>
+  <div class="row">
+    The number of guides:  <div id="rails-guides"></div>
+  </div>
+  </div>
 
 <%= link_to 'New Guide', new_guide_path, class: 'btn btn-primary'%>

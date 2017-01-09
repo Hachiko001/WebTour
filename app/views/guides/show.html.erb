@@ -39,8 +39,43 @@
   <strong>Rating:</strong>
   <%= @guide.rating %>
 </p>
+<p>
+<% if @guide.comments.count == 0 %>
+<strong> No comments </trong>
+<%else%>
+Number of comments: <%= @guide.comments.count %>
 
-<%= link_to 'Edit', edit_guide_path(@guide) %> |
+<li>
+  <%  @guide.comments.each do |comment|%>
+  <%= link_to comments.user.name %>
+  <span class= "date"> <%=time_ago_in_words(comment.create_at) %> ago</span>
+  <p>
+    <%= comment.content %>
+  </p>
+  <% end %>
+</li>
+
+<br/>
+<%= link_to "comments","#", id: "comments-link" %>
+<p>
+<%end%>
+  <%= form_for @comment do |f| %>
+    <fieldest>
+      <ol>
+        <li>
+          <%= f.text_area :content, row: 2, cols: 60,
+                            placeholder: "Write a comment..." %>
+        </li>
+        <li>
+          <%= f.button %>
+        </li>
+      </ol>
+    </fieldest>
+
+  </section>
+
+  <% end %>
+</br>
 <%= link_to 'Back', guides_path %>
 
 <br>

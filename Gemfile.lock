@@ -190,8 +190,10 @@ DEPENDENCIES
   byebug
   carrierwave
   coffee-rails (~> 4.2)
+
   devise
   dotenv-rails
+
   figaro
   flickraw
   frontend-generators
