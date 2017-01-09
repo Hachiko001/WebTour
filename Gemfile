@@ -70,3 +70,4 @@ gem 'redis', '~> 3.0.1'
 gem 'hiredis'
 
 gem 'flickraw'
+gem 'twilio-ruby', '~> 4.11.1'
