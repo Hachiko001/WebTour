@@ -4,18 +4,18 @@
 * [X] Hiểu và thực hiện được các lớp sass để thể hiện các trang web cơ bản
 * [ ] Deploy được project lên host (sử dụng heroku)
 ### 5 điểm
-* [ ] Sử dụng được javascript, jquery trong project
+* [x] Sử dụng được javascript, jquery trong project
 * [ ] Sử dụng AJAX trong project                    V
 * [ ] Phân trang                                    V
-* [ ] Gửi email
+* [x] Gửi email
 * [X] Chứng thực
-* [ ] Bảo vệ các thông tin nhạy cảm trong project với dotenv
+* [x] Bảo vệ các thông tin nhạy cảm trong project với dotenv
 ### 7.5 điểm
 * [ ] Viết test cho project: chỉ cần viết test cho model, integration test cho gui bằng rspec & capybara
 * [ ] Tích hợp Travis CI vào project
 * [ ] Tránh Fat Controller (đọc tài liệu của codeschool có đính kèm trong thư mục project mục 1, 2)
-* [ ] Sử dụng một số tính năng nâng cao:
-* [ ] upload hình
+Sử dụng một số tính năng nâng cao:
+* [x] upload hình
 * [ ] gửi sms
 * [ ] Tạo report và cho phép xuất với 1 số định dạng như: pdf, html
 ### 10 điểm
