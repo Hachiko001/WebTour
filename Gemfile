@@ -65,3 +65,5 @@ gem "ratyrate"
 
 gem 'redis', '~> 3.0.1'
 gem 'hiredis'
+
+gem 'flickraw'

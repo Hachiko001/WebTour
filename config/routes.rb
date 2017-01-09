@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   resources :order_guides, only: [:create, :update, :destroy]
   root 'grayscales#index'
   resource :cart, only: [:show]
+  resources :photos, only: [:index, :show, :new, :create, :destroy]
 end
