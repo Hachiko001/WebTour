@@ -1,4 +1,7 @@
 class Guide < ApplicationRecord
+has_many :order_guides
+default_scope { where(active: true) }
+
 ratyrate_rateable "language", "attitude", "price"
 
 has_many :comments

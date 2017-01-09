@@ -3,6 +3,13 @@ Rails.application.routes.draw do
 
   resources :comments, only: [:create]
 
+  get 'order_guides/create'
+
+  get 'order_guides/update'
+
+  get 'order_guides/destroy'
+
+
   get 'carts/show'
 
   post '/rate' => 'rater#create', :as => 'rate'
@@ -10,11 +17,8 @@ Rails.application.routes.draw do
 
   resources :guides
   resources :tours
-
-
-root 'grayscales#index'
-resource :cart, only: [:show] do
-put 'add/:guide_id', to: 'carts#add', as: :add_to
-put 'remove/:guide_id', to: 'carts#remove', as: :remove_from
-end
+  resources :order_guides, only: [:create, :update, :destroy]
+  root 'grayscales#index'
+  resource :cart, only: [:show]
+  resources :photos, only: [:index, :show, :new, :create, :destroy]
 end

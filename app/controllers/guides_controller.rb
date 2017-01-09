@@ -4,7 +4,7 @@ class GuidesController < ApplicationController
   # GET /guides
   # GET /guides.json
   def index
-
+    @order_guide = current_order.order_guides.new
     key = params[:q]
     search_language = params[:search_language]
     if( search_language == "Other")
@@ -13,7 +13,9 @@ class GuidesController < ApplicationController
       @guides = Guide.search_language(search_language).search_name key
     end
 
+
 end
+
 
   # GET /guides/1
   # GET /guides/1.json

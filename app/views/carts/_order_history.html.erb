@@ -1,0 +1,18 @@
+<% if !@order_guide.nil? && @order_guide.errors.any? %>
+  <div class="alert alert-danger">
+    <ul>
+    <% @order_guide.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<% if @order_guides.size == 0 %>
+  <p class="text-center">
+    There are no guides in your order.  Please <%= link_to "go back", root_path %> and order some our guides.
+  </p>
+<% else %>
+  <% @order_guides.each do |order_guide| %>
+    <%= render 'carts/cart_row', guide: order_guide.guide, order_guide: order_guide, show_total: true %>
+  <% end %>
+<% end %>
