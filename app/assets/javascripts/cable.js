@@ -4,7 +4,8 @@
 //= require action_cable
 //= require_self
 //= require_tree ./channels
-
+//= require jquery.raty
+//= require ratyrate
 (function() {
   this.App || (this.App = {});
 

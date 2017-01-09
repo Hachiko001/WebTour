@@ -15,8 +15,9 @@
 
 //= require_tree .
 //= require bootstrap-sprockets
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+//= require jquery.raty
+//= require ratyrate
+
 function readURL(input){
   debugger
    if(input.files && input.files[0]){

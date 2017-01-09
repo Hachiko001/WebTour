@@ -5,8 +5,8 @@
  <%= link_to "English", guides_path(search_language: "English"), class:'btn btn-success', method: :get %>
   <%= link_to "French", guides_path(search_language: "French"), class:'btn btn-warning', method: :get %>
     <%= link_to "Other", guides_path(search_language: "Other"), class:'btn btn-danger', method: :get %>
-<table>
-  <thead>
+<table class ="table table-striped">
+  <thead  class="thread thread-default">
     <tr>
       <th>Name</th>
       <th>Password</th>
@@ -40,7 +40,8 @@
 
 <br>
 
-<%= link_to 'New Guide', new_guide_path %>
+
+
 
 
 <div class="row" >
@@ -51,3 +52,5 @@
     The number of guides:  <div id="rails-guides"></div>
   </div>
   </div>
+
+<%= link_to 'New Guide', new_guide_path, class: 'btn btn-primary'%>

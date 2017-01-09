@@ -41,6 +41,7 @@ GEM
     arel (7.1.4)
     autoprefixer-rails (6.5.3)
       execjs
+    bcrypt (3.1.11-x64-mingw32)
     bootstrap (4.0.0.alpha5)
       autoprefixer-rails (>= 6.0.3)
       sass (>= 3.4.19)
@@ -60,6 +61,16 @@ GEM
     coffee-script-source (1.11.1)
     concurrent-ruby (1.0.2)
     debug_inspector (0.0.2)
+    devise (4.2.0)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 5.1)
+      responders
+      warden (~> 1.2.3)
+    dotenv (2.1.1)
+    dotenv-rails (2.1.1)
+      dotenv (= 2.1.1)
+      railties (>= 4.0, < 5.1)
     erubis (2.7.0)
     execjs (2.7.0)
     figaro (1.1.1)
@@ -69,6 +80,7 @@ GEM
       turf (= 0.0.5)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
+    hiredis (0.6.1)
     i18n (0.7.0)
     jbuilder (2.6.1)
       activesupport (>= 3.0.0, < 5.1)
@@ -93,6 +105,7 @@ GEM
     nio4r (1.2.1)
     nokogiri (1.6.8.1-x64-mingw32)
       mini_portile2 (~> 2.1.0)
+    orm_adapter (0.5.0)
     pg (0.19.0-x64-mingw32)
     puma (3.6.2)
     rack (2.0.1)
@@ -124,6 +137,10 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rainbow (2.0.0)
     rake (12.0.0)
+    ratyrate (1.2.2.alpha)
+    redis (3.0.7)
+    responders (2.3.0)
+      railties (>= 4.2.0, < 5.1)
     sass (3.4.22)
     sass-rails (5.0.6)
       railties (>= 4.0.0, < 6)
@@ -152,6 +169,8 @@ GEM
       tzinfo (>= 1.0.0)
     uglifier (3.0.4)
       execjs (>= 0.3.0, < 3)
+    warden (1.2.6)
+      rack (>= 1.0)
     web-console (3.4.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -165,19 +184,26 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  bcrypt
   bootstrap (~> 4.0.0.alpha5)
   byebug
   carrierwave
   coffee-rails (~> 4.2)
-  execjs
+
+  devise
+  dotenv-rails
+
   figaro
   frontend-generators
+  hiredis
   jbuilder (~> 2.5)
   jquery-rails
   pg
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
   rails-assets-tether
+  ratyrate
+  redis (~> 3.0.1)
   sass-rails (~> 5.0)
   sqlite3
   turbolinks (~> 5)

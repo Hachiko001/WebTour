@@ -1,4 +1,5 @@
 class Guide < ApplicationRecord
+ratyrate_rateable "language", "attitude", "price"
 
 has_many :comments
 
@@ -16,7 +17,7 @@ def image_url
     if image.present?
       image
     else
-    "#"
+      "http://loremflickr.com/320/240/#{CGI.escape name}"
     end
   end
 end

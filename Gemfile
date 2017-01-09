@@ -1,6 +1,13 @@
 source 'https://rubygems.org'
 
 
+#dotenv: env variable
+gem 'dotenv-rails'
+#user authentication
+gem 'devise'
+#bcrypt
+gem 'bcrypt', platforms: :ruby
+#file uploader
 gem 'carrierwave'
 #for the mail
 gem 'figaro'
@@ -56,3 +63,8 @@ gem 'rails-assets-tether'
 
 
 gem 'frontend-generators'
+
+gem "ratyrate"
+
+gem 'redis', '~> 3.0.1'
+gem 'hiredis'
