@@ -14,6 +14,14 @@ def self.search_language(key)
 end
 
 
+  def self.name_order
+    order(:name)
+  end
+
+  def self.price_order
+    order(price: :desc)
+  end
+
 mount_uploader :image, ImageUploader # Tells rails to use this uploader for this model.
 
 def image_url
