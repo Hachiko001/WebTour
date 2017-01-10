@@ -56,7 +56,9 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'execjs'
 gem 'rspec'
-gem 'rspec-rails'
+gem 'rspec-rails', '~> 3.5'
+
+gem 'spring-commands-rspec'
 
 
 
@@ -73,3 +75,7 @@ gem 'hiredis'
 
 gem 'flickraw'
 gem 'twilio-ruby', '~> 4.11.1'
+
+gem 'prawn'
+gem "prawnto_2", :require => "prawnto"
+gem "prawn-table"

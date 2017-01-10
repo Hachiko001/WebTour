@@ -13,6 +13,16 @@ class GuidesController < ApplicationController
       @guides = Guide.search_language(search_language).search_name key
     end
 
+    respond_to do |format|
+     format.html
+     format.pdf do
+       pdf = ReportPdf.new(@guides)
+       send_data pdf.render, filename: 'report.pdf', type: 'application/pdf'
+     end
+   end
+
+
+
 
 end
 
