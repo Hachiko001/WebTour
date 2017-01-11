@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<div class="container">
 <p>
   <strong>Name:</strong>
   <%= @guide.name %>
@@ -45,10 +45,11 @@
 <%else%>
 Number of comments: <%= @guide.comments.count %>
 
-<li>
+
   <%  @guide.comments.each do |comment|%>
-  <%= link_to comments.user.name %>
-  <span class= "date"> <%=time_ago_in_words(comment.create_at) %> ago</span>
+  <li>
+  <%= link_to comment.title %>
+  <span class= "date"> <%=time_ago_in_words(comment.created_at) %> ago</span>
   <p>
     <%= comment.content %>
   </p>
@@ -67,7 +68,8 @@ Number of comments: <%= @guide.comments.count %>
                             placeholder: "Write a comment..." %>
         </li>
         <li>
-          <%= f.button %>
+          <input type="hidden" value ="<%= @guide.id %>" name="guide_id">
+   <%= f.submit %>
         </li>
       </ol>
     </fieldest>
@@ -84,3 +86,4 @@ Price: <%= rating_for @guide, "price",star: 5, disable_after_rate: false, enable
 Language: <%= rating_for @guide, "language", star: 5, disable_after_rate: false, enable_half: true,cancel: true%>
 <br>
 Attitude: <%= rating_for @guide, "attitude", star: 5, disable_after_rate: false, enable_half: true, cancel: true %>
+</div>

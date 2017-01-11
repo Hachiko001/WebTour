@@ -42,10 +42,22 @@
       <button class="btn btn-outline-success" type="submit">Search</button>
       <% end %>
     </form>
-</nav>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-    <%= yield %>
+  </head   >
 
+  <body>
+
+<div class="container">
+    <nav class="navbar navbar-light bg-faded justify-content-between">
+  <a class="navbar-brand">Navbar</a>
+  <form class="form-inline float-lg-right">
+    <%= form_tag guides_path, class: "form-inline", method: :get do %>
+    <input class="form-control" type="text" placeholder="Keyword" name="q">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+    <% end %>
+  </form>
+>>>>>>> origin/master
+</nav>
+</div>
+        <%= yield %>
   </body>
 </html>

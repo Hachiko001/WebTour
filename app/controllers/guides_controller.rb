@@ -30,6 +30,8 @@ end
   # GET /guides/1
   # GET /guides/1.json
   def show
+    @guide = Guide.find(params[:id])
+    @comment = Comment.new
   end
 
   # GET /guides/new
