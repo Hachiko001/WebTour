@@ -1,46 +1,87 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-.jumbotron {
-background-image: url("../img/jumbotron_bg.jpg");
-background-size: cover;}
-.src-image {
-  display: none;
-}
-
 .card {
+  padding-top: 20px;
+  margin: 10px 0 20px 0;
+  background-color: #ffffff;
+  border: 1px solid #d8d8d8;
+  border-top-width: 0;
+  border-bottom-width: 2px;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+.card.hovercard {
+  position: relative;
+  width: 250px;
+  padding-top: 0;
   overflow: hidden;
-  position: relative;
-  border: 1px solid #CCC;
-  border-radius: 8px;
   text-align: center;
-  padding: 0;
-  background-color: #284c79;
-  color: rgb(136, 172, 217);
+  background-color: #fff;
 }
 
-.card .header-bg {
-  /* This stretches the canvas across the entire hero unit */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70px;
-  border-bottom: 1px #FFF solid;
-  /* This positions the canvas under the text */
-  z-index: 1;
+.card.hovercard img {
+  width: 300px;
+  height: 200px;
 }
-.card .avatar {
+
+.card.hovercard .avatar {
   position: relative;
-  margin-top: 15px;
-  z-index: 100;
+  top: -40px;
+  margin-bottom: -40px;
 }
 
-.card .avatar img {
+.card.hovercard .avatar img {
   width: 100px;
   height: 100px;
+  max-width: 100px;
+  max-height: 100px;
   -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  border: 5px solid rgba(0,0,30,0.8);
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+}
+
+.card.hovercard .info {
+  padding: 4px 8px 10px;
+}
+
+.card.hovercard .info .title {
+  margin-bottom: 4px;
+  font-size: 24px;
+  line-height: 1;
+  color: #262626;
+  vertical-align: middle;
+}
+
+.card.hovercard .info .desc {
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 20px;
+  color: #737373;
+  text-overflow: ellipsis;
+}
+
+.card.hovercard .bottom {
+  padding: 0 20px;
+  margin-bottom: 17px;
+}
+
+.card.people .card-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 20px;
+  line-height: 29px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }

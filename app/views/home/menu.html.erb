@@ -1,4 +1,4 @@
-
+<div class="container">
 <h1> Menu </h1>
 
 <div class="btn-group" role="group" aria-label="Basic example">
@@ -27,36 +27,37 @@
   <%= link_to "Named", menu_path(sort_mode: "0", q: ""), class: 'btn btn-success', method: :get %>
   <%= link_to "Priced", menu_path(sort_mode: "1", q: ""), class: 'btn btn-success', method: :get %>
 </div>
+<br>
+
 <% index=0 %>
 <div class="container">
-	<div class="row">
-		<h1>
-        Dynamically blurring avatar images using Canvas.
-        </h1>
-	</div>
-    <div class="row">
-      <% @guides.each do |g| %>
-      <% index=index +1 %>
-          <% if index % 3 ==0%>
-            <div class="row">
-                <%end%>
-        <div class="col-sm-3">
-            <div class="card">
-                <canvas class="header-bg" width="250" height="70" id="header-blur"></canvas>
-                <div class="avatar">
-                      <%= image_tag g.image_url , :class=> 'avatar'%>
-                </div>
-                <div class="content">
-                      <%= g.name %>
-                    <p><button type="button" class="btn btn-default">Contact</button></p>
-                </div>
+  <% @guides.each do |g| %>
+    <% index=index +1 %>
+        <% if index % 4 ==0%>
+           <div class="row">
+            <%end%>
+             <div class="col-sm-3">
+               <div class="card hovercard">
+            <img src="images/BG.jpg" alt=""/>
+              <div class="avatar">
+                <%= image_tag g.image_url %>
               </div>
+              <div class="info">
+                  <div class="title">
+                  <%= g.name %>
+                  </div>
+                  <div class="desc">Lorem ipsum</div>
+                  <div class="desc">Lorem ipsum</div>
+                  <div class="desc">Lorem ipsum</div>
+              </div>
+                <div class="bottom">
+                    <button class="btn btn-default">Button</button>
+                </div>
             </div>
           </div>
+      <% if index % 4 == 0%>
       </div>
-        <%= image_tag g.image_url , :class=> 'src-image'%>
-        <% if index % 3 ==0%>
-    </div>
   <%end%>
-
-<% end %>
+    <%end%>
+</div>
+</div>

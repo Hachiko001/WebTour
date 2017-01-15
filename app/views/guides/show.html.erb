@@ -1,44 +1,43 @@
+
 <p id="notice"><%= notice %></p>
 <div class="container">
-<p>
-  <strong>Name:</strong>
-  <%= @guide.name %>
-</p>
+		<div class="card1">
+			<div class="container-fliud">
+				<div class="wrapper row">
+					<div class="preview col-md-6">
 
-<p>
-  <strong>Password:</strong>
-  <%= @guide.password %>
-</p>
+						<div class="preview-pic tab-content">
+						  <div class="tab-pane active" id="pic-1"><img src="http://placekitten.com/400/252" /></div>
+						</div>
+					</div>
+					<div class="details col-md-3">
+						<h3 class="product-title">  <%= @guide.name %></h3>
+							<span class="review-no">41 reviews</span>
 
-<p>
-  <strong>Date:</strong>
-  <%= @guide.date %>
-</p>
+						<h4><b>Language:</b>   <%= @guide.language %></h4>
+						<h4><b>Email:</b>   <%= @guide.email %></h4>
+            <h4><b>Birthday: </b>     <%= @guide.date %></h4>
+              <h4><b>Address: </b>     <%= @guide.address %></h4>
+              <br>
+						<div class="action">
+							<button class="add-to-cart btn btn-default" type="button">Book this guide</button>
+						</div>
+					</div>
+            <div class="details col-md-3">
+          <br>
+          Price: <%= rating_for @guide, "price",star: 5, disable_after_rate: false, enable_half: true,cancel: true, imdb_avg: true %>
+          <br>
+          Language: <%= rating_for @guide, "language", star: 5, disable_after_rate: false, enable_half: true,cancel: true%>
+          <br>
+          Attitude: <%= rating_for @guide, "attitude", star: 5, disable_after_rate: false, enable_half: true, cancel: true %>
 
-<p>
-  <strong>Language:</strong>
-  <%= @guide.language %>
-</p>
+          </div>
+				</div>
+			</div>
+		</div>
 
-<p>
-  <strong>Address:</strong>
-  <%= @guide.address %>
-</p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @guide.email %>
-</p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @guide.image %>
-</p>
-
-<p>
-  <strong>Rating:</strong>
-  <%= @guide.rating %>
-</p>
 <p>
 <% if @guide.comments.count == 0 %>
 <strong> No comments </trong>
@@ -57,7 +56,7 @@ Number of comments: <%= @guide.comments.count %>
 </li>
 
 <br/>
-<%= link_to "comments","#", id: "comments-link" %>
+
 <p>
 <%end%>
   <%= form_for @comment do |f| %>
@@ -79,11 +78,3 @@ Number of comments: <%= @guide.comments.count %>
   <% end %>
 </br>
 <%= link_to 'Back', guides_path %>
-
-<br>
-Price: <%= rating_for @guide, "price",star: 5, disable_after_rate: false, enable_half: true,cancel: true, imdb_avg: true %>
-<br>
-Language: <%= rating_for @guide, "language", star: 5, disable_after_rate: false, enable_half: true,cancel: true%>
-<br>
-Attitude: <%= rating_for @guide, "attitude", star: 5, disable_after_rate: false, enable_half: true, cancel: true %>
-</div>

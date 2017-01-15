@@ -1,6 +1,9 @@
-
-<%= form_for(guide) do |f| %>
-  <% if guide.errors.any? %>
+<div class="container ">
+    <div class="row" >
+        <div class="col-xs-12 col-sm-5 col-md-11 col-sm-offset-2 col-md-offset-2">
+          <div class="col-sm-5 no-padding">
+              <%= form_for(guide) do |f| %>
+                <% if guide.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(guide.errors.count, "error") %> prohibited this guide from being saved:</h2>
 
@@ -37,6 +40,17 @@
     <%= f.text_field :address,class: 'form-control' %>
   </div>
 
+
+
+  <div class="form-group">
+    <%= f.label :rating, class: 'form-control-lable' %>
+    <%= f.text_field :rating, class: 'form-control' %>
+  </div>
+
+
+
+</div>
+<div class="col-sm-4 form-bg">
   <div class="form-group">
     <%= f.label :email, class: 'form-control-lable' %>
     <%= f.text_field :email, class: 'form-control' %>
@@ -45,15 +59,15 @@
   <div class="form-group">
     <%= f.label :image, class: 'form-control-lable' %>
     <%= f.file_field :image, onchange:"readURL(this)", class:"btn btn-info" %>
-    <img id ="blah" src="#" alt = "your image" width = "300" height="300">
+    <img id ="blah" src="#" alt = "your image" width = "295" height="240">
   </div>
-
-  <div class="form-group">
-    <%= f.label :rating, class: 'form-control-lable' %>
-    <%= f.text_field :rating, class: 'form-control' %>
-  </div>
-
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Create" ,:class =>'btn btn-lg btn-success btn-block'%>
   </div>
+</div>
+
 <% end %>
+
+  </div>
+  </div>
+</div>

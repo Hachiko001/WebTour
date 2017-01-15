@@ -30,7 +30,9 @@
         <td><%= guide.language %></td>
         <td><%= guide.address %></td>
         <td><%= guide.email %></td>
-        <td><img class="card-img-top" ><%= image_tag guide.image_url %></td>
+        <td>
+          <%= image_tag guide.image_url ,:class =>'card hovercard'%>
+        </td>
         <td><%= guide.rating %></td>
         <td><%= guide.price %></td>
         <td><%= guide.active %></td>
