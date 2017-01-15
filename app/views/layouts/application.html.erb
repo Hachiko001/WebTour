@@ -9,55 +9,7 @@
   </head>
 
   <body>
-
-    <nav class="navbar navbar-light bg-faded">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <!--ul class="nav navbar-nav"-->
-      <ul class="nav nav-pills">
-        <li class="nav-item">
-          <a class="nav-link active" href="<%= root_path %>">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item <%= 'active' if current_page?(menu_path)%>" >
-          <%= link_to "Menu", menu_path, class:'nav-link' %>
-        </li>
-        <li class="nav-item <%= 'active' if current_page?(menu_path)%>">
-          <%= link_to "Contact Us",menu_path , class:'nav-link' %>
-
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-          <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-      </ul>
-
-
-
-    <form class="form-inline float-lg-right">
-      <%= form_tag guides_path, class: "form-inline", method: :get do %>
-      <input class="form-control" type="text" placeholder="Keyword" name="q">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-      <% end %>
-    </form>
-  </head   >
-
-  <body>
-
-<div class="container">
-    <nav class="navbar navbar-light bg-faded justify-content-between">
-  <a class="navbar-brand">Navbar</a>
-  <form class="form-inline float-lg-right">
-    <%= form_tag guides_path, class: "form-inline", method: :get do %>
-    <input class="form-control" type="text" placeholder="Keyword" name="q">
-    <button class="btn btn-outline-success" type="submit">Search</button>
-    <% end %>
-  </form>
->>>>>>> origin/master
-</nav>
-</div>
+  
         <%= yield %>
   </body>
 </html>
