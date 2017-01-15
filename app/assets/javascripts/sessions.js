@@ -1,3 +1,14 @@
+$(document).ready(function(){
+		$(".open").click(function(){
+			$('.pop-outer').fadeIn('slow');
+
+		});
+		$(".close").click(function(){
+			$('.pop-outer').fadeOut('slow');
+
+		});
+	});
+
 $(function(){
     $('.button-checkbox').each(function(){
 		var $widget = $(this),
