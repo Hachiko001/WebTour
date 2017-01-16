@@ -1,0 +1,13 @@
+
+
+      <%= form_for order_guide, remote: true do |f| %>
+      <h4 ><b>Unit Price:</b> <span style="color: green"><%= number_to_currency guide.price %></span></h4>
+
+        <div class="input-group">
+          <%= f.number_field :quantity, value: 1, class: "form-control ", min: 1 %>
+          <div class="input-group-btn">
+            <%= f.hidden_field :guide_id, value: guide.id %>
+            <%= f.submit "Book this guide", class: "btn btn-primary" %>
+          </div>
+        </div>
+      <% end %>

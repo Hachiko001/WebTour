@@ -30,7 +30,6 @@ end
   # GET /guides/1
   # GET /guides/1.json
   def show
-    @order_guide = current_order.order_guides.new
     @guide = Guide.find(params[:id])
     @comment = Comment.new
   end
@@ -83,6 +82,9 @@ end
       format.json { head :no_content }
         end
   end
+def show
+  @comment = Comment.new
+end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_guide
