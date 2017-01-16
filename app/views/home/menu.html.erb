@@ -38,7 +38,7 @@
             <%end%>
              <div class="col-sm-3">
                <div class="card hovercard">
-            <img src="images/BG.jpg" alt=""/>
+            <%= image_tag g.image_url %>
               <div class="avatar">
                 <%= image_tag g.image_url %>
               </div>
@@ -46,12 +46,12 @@
                   <div class="title">
                   <%= g.name %>
                   </div>
-                  <div class="desc">Lorem ipsum</div>
-                  <div class="desc">Lorem ipsum</div>
-                  <div class="desc">Lorem ipsum</div>
+                  <div class="desc">Language: <%= g.language%></div>
+                  <div class="desc">Price: <%=  g.price%></div>
               </div>
                 <div class="bottom">
-                    <button class="btn btn-default">Button</button>
+
+                    <%= link_to 'Show', g, class:'btn btn-success' %>
                 </div>
             </div>
           </div>

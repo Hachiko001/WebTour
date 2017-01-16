@@ -18,10 +18,9 @@
 						<h4><b>Email:</b>   <%= @guide.email %></h4>
             <h4><b>Birthday: </b>     <%= @guide.date %></h4>
               <h4><b>Address: </b>     <%= @guide.address %></h4>
-              <br>
-						<div class="action">
-							<button class="add-to-cart btn btn-default" type="button">Book this guide</button>
-						</div>
+
+							<%= render "guide_row", guide: @guide, order_guide: @order_guide %>
+						
 					</div>
             <div class="details col-md-3">
           <br>
